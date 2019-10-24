@@ -21,8 +21,8 @@ class Student
   end
   
   def self.drop_table
-    sql = "DRDP TABLE IF EXISTS students"
-    CD[:conn].execute(sql)
+    sql = "DROP TABLE IF EXISTS students"
+    DB[:conn].execute(sql)
   end
 
   # Remember, you can access your database connection anywhere in this class

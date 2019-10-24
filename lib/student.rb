@@ -22,7 +22,10 @@ class Student
   
   def self.drop_table
     sql = <<-SQL
-      
+      DRDP TABLE IF EXISTS students
+    SQL
+    CD[:conn].execute(sql)
+  end
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]  
